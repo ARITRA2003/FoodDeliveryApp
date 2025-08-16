@@ -14,7 +14,7 @@ router.post("/createuser",
   body('password',"Invalid Credentials").isLength({min:8}),
   body('name',"Invalid Credentials").isLength({min:4}),
 ],
-async(req,res)=>{
+ async(req,res)=>{
  
   const result = validationResult(req);
   if (!result.isEmpty()) {
