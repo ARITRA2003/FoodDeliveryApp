@@ -13,7 +13,7 @@ const reducer=(state,action)=>{
       return newArray;
     case 'UPDATE':
       const updateArray = state.map(food =>{
-          if(food.id===action.id){
+          if(food.id === action.id){
             return {
               ...food,
               quantity:parseInt( action.quantity ) + parseInt(food.quantity),

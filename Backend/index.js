@@ -10,8 +10,6 @@ dotenv.config();
 
 const app = Express();
 
-const port = process.env.PORT || 27019;
-
 // console.log( process.env.MONGODB_URI)
 //Connecting app to the DataBase
 connecToMongo();
@@ -45,6 +43,4 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+export default app;
